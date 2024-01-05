@@ -1,4 +1,4 @@
-//Display the current day at the top of the calender when a user opens the planner.
+//Display when a user opens the planner.
 
 const date = dayjs().format('dddd, D MMM YYYY');
 console.log(date);
