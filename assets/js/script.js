@@ -59,7 +59,7 @@ const userInput = $('textarea')
 function getLocalStorage(){
     let timeBlock = $('.time-block')
     timeBlock.each(function(){
-        if(localStorage.getItem($(this).attr('id')) != 'undefined'){
-            $(this).find($('textarea')).val(localStorage.getItem($(this).attr('id')))
+        if(JSON.parse(localStorage.getItem($(this).attr('id')) != 'undefined')){
+            $(this).find($('textarea')).val(JSON.parse(localStorage.getItem($(this).attr('id'))))
         } 
     })}
