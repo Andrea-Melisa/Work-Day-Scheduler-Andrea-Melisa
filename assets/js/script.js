@@ -17,7 +17,7 @@ $(function() {
 function checkTime() {
 
     const timer = setInterval(() => {
-        assignColors;
+        assignBackgroundColour();
     }, 1000);
 }
 
@@ -52,14 +52,13 @@ $('.saveBtn').on('click', function() {
     localStorage.setItem(timeBlockId, JSON.stringify(eventText)); // Save the event to local storage
 });
 
-
 // Get the previous local storage
 const userInput = $('textarea')
 
 function getLocalStorage(){
     let timeBlock = $('.time-block')
     timeBlock.each(function(){
-        if(JSON.parse(localStorage.getItem($(this).attr('id')) != 'undefined')){
+        if(JSON.parse(localStorage.getItem($(this).attr('id')) !== 'undefined')){
             $(this).find($('textarea')).val(JSON.parse(localStorage.getItem($(this).attr('id'))))
         } 
     })}
